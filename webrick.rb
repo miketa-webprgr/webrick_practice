@@ -22,7 +22,7 @@ server.mount_proc("/form_get") do |req, res|
   body += "#{req.query}"
   body += "<p>名前：#{name.force_encoding("utf-8")}</p>"
   body += "<p>年齢：#{age.to_s}</p>"
-  body += "<div style = 'background-color:#{color.to_s}'>好きな色: #{color.to_s}</div>"
+  body += "<p style = 'background-color:#{color.to_s}'>好きな色: #{color.to_s}</div>"
 
   body += "</body></html>\n"
 
@@ -41,7 +41,7 @@ server.mount_proc("/form_post") do |req, res|
   body += "#{req.query}"
   body += "<p>名前：#{name.force_encoding("utf-8")}</p>"
   body += "<p>年齢：#{age.to_s}</p>"
-  body += "<div style = 'background-color:#{color.to_s}'>好きな色: #{color.to_s}</div>"
+  body += "<p style = 'background-color:#{color.to_s}'>好きな色: #{color.to_s}</div>"
 
   body += "</body></html>\n"
 

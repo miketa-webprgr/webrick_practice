@@ -12,6 +12,45 @@ server = WEBrick::HTTPServer.new({
   :Port => 8000
 })
 
+server.mount_proc("/form_get") do |req, res|
+  name = req.query['get_name']
+  age = req.query['get_age']
+  color = req.query['get_color']
+
+  body = "<html><meta charset='utf-8'><body>\n"
+  
+  body += "#{req.query}"
+  body += "<p>名前：#{name.force_encoding("utf-8")}</p>"
+  body += "<p>年齢：#{age.to_s}</p>"
+  body += "<div style = 'background-color:#{color.to_s}'>好きな色: #{color.to_s}</div>"
+
+  body += "</body></html>\n"
+
+  res.status = 200
+  res['Content-Type'] = 'text/html'
+  res.body = body
+end
+
+server.mount_proc("/form_post") do |req, res|
+  name = req.query['post_name']
+  age = req.query['post_age']
+  color = req.query['post_color']
+
+  body = "<html><meta charset='utf-8'><body>\n"
+  
+  body += "#{req.query}"
+  body += "<p>名前：#{name.force_encoding("utf-8")}</p>"
+  body += "<p>年齢：#{age.to_s}</p>"
+  body += "<div style = 'background-color:#{color.to_s}'>好きな色: #{color.to_s}</div>"
+
+  body += "</body></html>\n"
+
+  res.status = 200
+  res['Content-Type'] = 'text/html'
+  res.body = body
+end
+
+
 server.mount_proc("/time") do |req, res|
   name = "miketa"
   age = 32

@@ -6,37 +6,46 @@
   </head>
 
   <body>
-    <form>
-      <fieldset>
-        <legend>GETで送る</legend>
-        <p>
-          <input type="radio" name="size" id="size_1" value="small">
-          <label for="size_1">Small</label>
-        </p>
-        <p>
-          <input type="radio" name="size" id="size_2" value="medium">
-          <label for="size_2">Medium</label>
-        </p>
-        <p>
-          <input type="radio" name="size" id="size_3" value="large">
-          <label for="size_3">Large</label>
-        </p>
-      </fieldset>
-      <fieldset>
-        <legend>POSTで送る</legend>
-        <p>
-          <input type="radio" name="size" id="size_1" value="small">
-          <label for="size_1">Small</label>
-        </p>
-        <p>
-          <input type="radio" name="size" id="size_2" value="medium">
-          <label for="size_2">Medium</label>
-        </p>
-        <p>
-          <input type="radio" name="size" id="size_3" value="large">
-          <label for="size_3">Large</label>
-        </p>
-      </fieldset> 
-    </form>
+    <fieldset>
+      <legend>GETで送る</legend>
+      <form action="/form_get" method="get">
+        <div>
+          <label for="get_name">名前：</label>
+          <input type="text" name="get_name" id="get_name" value="ななしさん">
+        </div>
+        <div>
+          <label for="get_age">年齢：</label>
+          <input type="number" name="get_age" id="get_age">
+        </div>
+          <div>
+          <label for="post_color">好きな色：</label>
+          <input type="color" name="get_color" id="get_color" value="#fffcd1">
+          </div>
+          <div>
+          <button>送信</button>
+        </div>
+      </form>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>POSTで送る</legend>
+      <form action="/form_post" method="post">
+        <div>
+          <label for="post_name">名前：</label>
+          <input type="text" name="post_name" id="post_name" value="ななしさん">
+        </div>
+        <div>
+          <label for="post_age">年齢：</label>
+          <input type="number" name="post_age" id="post_age">
+        </div>
+        <div>
+          <label for="post_color">好きな色：</label>
+          <input type="color" name="post_color" id="post_color" value="#fff1cd">
+        </div>
+        <div>
+          <button>送信</button>
+        </div>
+      </form>
+    </fieldset> 
   </body>
 </html>

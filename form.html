@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>    
+    <meta charset="UTF-8">
+    <title>みけたふぉーむ</title>
+  </head>
+
+  <body>
+    <fieldset>
+      <legend>GETで送る</legend>
+      <form action="/receive_form" method="get">
+        <div>
+          <label for="get_name">名前：</label>
+          <input type="text" name="get_name" id="get_name" value="ななしさん">
+        </div>
+        <div>
+          <label for="get_age">年齢：</label>
+          <input type="number" name="get_age" id="get_age">
+        </div>
+          <div>
+          <label for="post_color">好きな色：</label>
+          <input type="color" name="get_color" id="get_color" value="#fffcd1">
+          </div>
+          <div>
+          <button>送信</button>
+        </div>
+      </form>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>POSTで送る</legend>
+      <form action="/receive_form" method="post">
+        <div>
+          <label for="post_name">名前：</label>
+          <input type="text" name="post_name" id="post_name" value="ななしさん">
+        </div>
+        <div>
+          <label for="post_age">年齢：</label>
+          <input type="number" name="post_age" id="post_age">
+        </div>
+        <div>
+          <label for="post_color">好きな色：</label>
+          <input type="color" name="post_color" id="post_color" value="#fff1cd">
+        </div>
+        <div>
+          <button>送信</button>
+        </div>
+      </form>
+    </fieldset> 
+  </body>
+</html>
